@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color-primaria: #F3F5FC;
+    --color-secundaria: #0A3871;
+    --color-terciaria: #D8DFE8;
+    --fuente-inter: 'Inter', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primaria);
+    font-family: var(--fuente-inter);
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.contenedor {
+    
+    margin: 0 auto;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding-bottom: 100px;
+}
+
+.imagen_logo {
+    width: 120px;
+    height: 48px;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    gap: 80px;
+}
+
+.input-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.contenedor__input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: var(--color-secundaria);
+    font-size: 32px;
+    resize: none;
+    font-family: var(--fuente-inter);
+}
+
+.contenedor__input::placeholder {
+    color: var(--color-secundaria);
+}
+
+.contenido-boton {
+    margin-top: 16px;
+}
+
+.mensaje {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    color: #495057;
+    font-size: 12px;
+}
+
+.imagen-info {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.botones {
+    display: flex;
+    gap: 24px;
+}
+
+.boton {
+    padding: 24px;
+    border: 1px solid var(--color-secundaria);
+    border-radius: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    flex: 1;
+    font-family: var(--fuente-inter);
+}
+
+.encriptar {
+    background-color: var(--color-secundaria);
+    color: white;
+}
+
+.desencriptar {
+    background-color: var(--color-terciaria);
+    color: var(--color-secundaria);
+}
+
+.output-section {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.nothing-section {
+    width: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.resultado {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 32px;
+    padding: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#no-resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.Persona_Alura {
+    width: 100%;
+    max-width: 336px;
+    margin-bottom: 32px;
+}
+
+#resultado-text {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    color: #495057;
+    display: none;
+}
+
+.copiar {
+    margin-top: 32px;
+    background-color: white;
+    color: var(--color-secundaria);
+    border: 1px solid var(--color-secundaria);
+    display: none;
+    flex: none;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #343A40;
+    margin-bottom: 16px;
+}
+
+p {
+    font-size: 16px;
+    color: #495057;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .input-section {
+        margin-top: 50px;
+    }
+
+    .output-section {
+        width: 100%;
+    }
+
+    .resultado {
+        min-height: 200px;
+    }
+
+    .Persona_Alura {
+        display: none;
+    }
+
+    .botones {
+        /* Eliminamos flex-direction: column; */
+        justify-content: space-between;
+    }
+
+    .boton {
+        width: 48%; /* Ajusta este valor según necesites */
+    }
+
+    .copiar {
+        margin-top: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .contenedor {
+        height: auto;
+    }
+
+    main {
+        gap: 24px;
+    }
+
+    .input-section {
+        margin-top: 24px;
+    }
+
+    .contenedor__input {
+        font-size: 24px;
+        min-height: 200px;
+    }
+
+    .boton-content {
+        margin-top: 12px;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .boton {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .output-section {
+        margin-top: 24px;
+    }
+
+    .resultado {
+        padding: 24px;
+        min-height: auto;
+    }
+
+    #no-resultado h2 {
+        font-size: 20px;
+    }
+
+    #no-resultado p {
+        font-size: 14px;
+    }
+
+    .copiar {
+        margin-top: 16px;
+    }
+}
